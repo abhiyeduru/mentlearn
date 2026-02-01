@@ -1,0 +1,36 @@
+[debug] [2025-12-19T09:23:52.951Z] ----------------------------------------------------------------------
+[debug] [2025-12-19T09:23:52.958Z] Command:       /Users/yeduruabhiram/.nvm/versions/node/v22.18.0/bin/node /Users/yeduruabhiram/.nvm/versions/node/v22.18.0/bin/firebase deploy --only storage
+[debug] [2025-12-19T09:23:52.958Z] CLI Version:   14.25.0
+[debug] [2025-12-19T09:23:52.959Z] Platform:      darwin
+[debug] [2025-12-19T09:23:52.959Z] Node Version:  v22.18.0
+[debug] [2025-12-19T09:23:52.959Z] Time:          Fri Dec 19 2025 14:53:52 GMT+0530 (India Standard Time)
+[debug] [2025-12-19T09:23:52.959Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-19T09:23:52.960Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-12-19T09:23:53.088Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-19T09:23:53.088Z] > authorizing via signed-in user (abhiyeduru8@gmail.com)
+[debug] [2025-12-19T09:23:53.088Z] [iam] checking project mentor-app-238c6 for permissions ["firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2025-12-19T09:23:53.089Z] Checked if tokens are valid: false, expires at: 1765469254662
+[debug] [2025-12-19T09:23:53.089Z] Checked if tokens are valid: false, expires at: 1765469254662
+[debug] [2025-12-19T09:23:53.089Z] > refreshing access token with scopes: []
+[debug] [2025-12-19T09:23:53.090Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-19T09:23:53.090Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-19T09:23:54.805Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-19T09:23:54.805Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-19T09:23:54.820Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mentor-app-238c6:testIamPermissions [none]
+[debug] [2025-12-19T09:23:54.820Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mentor-app-238c6:testIamPermissions x-goog-quota-user=projects/mentor-app-238c6
+[debug] [2025-12-19T09:23:54.820Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mentor-app-238c6:testIamPermissions {"permissions":["firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2025-12-19T09:23:55.213Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-12-19T09:23:55.213Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-12-19T09:23:57.111Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mentor-app-238c6:testIamPermissions 200
+[debug] [2025-12-19T09:23:57.111Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mentor-app-238c6:testIamPermissions {"permissions":["firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[info] 
+[info] === Deploying to 'mentor-app-238c6'...
+[info] 
+[info] i  deploying storage 
+[info] i  storage: ensuring required API firebasestorage.googleapis.com is enabled... 
+[debug] [2025-12-19T09:23:57.118Z] Checked if tokens are valid: true, expires at: 1766139833805
+[debug] [2025-12-19T09:23:57.118Z] Checked if tokens are valid: true, expires at: 1766139833805
+[debug] [2025-12-19T09:23:57.118Z] >>> [apiv2][query] GET https://firebasestorage.googleapis.com/v1alpha/projects/mentor-app-238c6/defaultBucket [none]
+[debug] [2025-12-19T09:23:58.268Z] <<< [apiv2][status] GET https://firebasestorage.googleapis.com/v1alpha/projects/mentor-app-238c6/defaultBucket 404
+[debug] [2025-12-19T09:23:58.268Z] <<< [apiv2][body] GET https://firebasestorage.googleapis.com/v1alpha/projects/mentor-app-238c6/defaultBucket {"error":{"code":404,"message":"Requested entity was not found.","status":"NOT_FOUND"}}

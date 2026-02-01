@@ -1,0 +1,97 @@
+# Mentneo - Full Stack Development Platform
+# Robots.txt - Optimized for SEO and crawl efficiency
+
+# Allow all major search engines
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /student/dashboard
+Disallow: /mentor/dashboard
+Disallow: /private/
+Disallow: /api/
+Disallow: /temp/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /user/account/
+Disallow: /user/settings/
+Disallow: /payment/
+Disallow: /*?search=*
+Disallow: /*?sort=*
+Disallow: /*?filter=*
+Disallow: /*?page=*
+Disallow: /*?sessionid=*
+Disallow: /*?token=*
+Disallow: /login
+Disallow: /signup
+Disallow: /register
+
+# Allow important directories and resources
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+Allow: /static/
+Allow: /blog/
+Allow: /courses/
+Allow: /mentors/
+Allow: /about
+Allow: /contact
+Allow: /pricing
+Allow: /live-sessions
+
+# Optimize crawl budget - prevent overloading server
+Crawl-delay: 1
+
+# Google specific optimizations
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /student/dashboard
+Disallow: /mentor/dashboard
+Crawl-delay: 0.5
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/
+Allow: /static/
+
+# Bing optimizations
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block or slow down aggressive crawlers
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 5
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Baiduspider
+Crawl-delay: 5
+
+User-agent: YandexBot
+Crawl-delay: 2
+
+# Block malicious bots
+User-agent: SiteBot
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+# Canonical domain
+Host: https://mentneo.com
+
+# Sitemap locations for better indexing
+Sitemap: https://mentneo.com/sitemap.xml
+Sitemap: https://mentneo.com/sitemap-blog.xml
+Sitemap: https://mentneo.com/sitemap-courses.xml
+Sitemap: https://mentneo.com/sitemap-mentors.xml
+Sitemap: https://mentneo.com/sitemap-categories.xml
