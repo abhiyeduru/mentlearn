@@ -13,7 +13,7 @@ import {
   FiSearch,
   FiEye,
   FiMessageSquare
-} from 'react-icons/fi/index.esm.js';
+} from 'react-icons/fi';
 
 export default function SupportTickets() {
   const [tickets, setTickets] = useState([]);

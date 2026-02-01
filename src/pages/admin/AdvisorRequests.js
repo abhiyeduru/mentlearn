@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, getDocs, query, orderBy, updateDoc, doc, deleteDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import Navbar from '../../components/admin/Navbar.js';
-import { FaPhone, FaEnvelope, FaUser, FaCalendar, FaCheck, FaTrash, FaClock } from 'react-icons/fa/index.esm.js';
+import { FaPhone, FaEnvelope, FaUser, FaCalendar, FaCheck, FaTrash, FaClock } from 'react-icons/fa';
 
 export default function AdvisorRequests() {
   const [requests, setRequests] = useState([]);

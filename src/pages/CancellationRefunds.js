@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MenteoLogo from '../components/MenteoLogo.js';
-import { FaArrowLeft } from 'react-icons/fa/index.esm.js';
+import { FaArrowLeft } from 'react-icons/fa';
 
 export default function CancellationRefunds() {
   return (

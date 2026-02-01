@@ -10,7 +10,7 @@ import {
   FaBook, FaUsers, FaRupeeSign, FaStar, FaTrophy, FaCamera,
   FaUserGraduate, FaChalkboardTeacher, FaClipboardList, FaCog,
   FaArrowUp, FaArrowDown, FaBullhorn, FaExclamationCircle, FaCheckCircle, FaTimes
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 import { uploadCourseThumbnailWithFallback } from '../../utils/cloudinary.js';
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaArrowLeft } from 'react-icons/fa/index.esm.js';
+import { FaHome, FaArrowLeft } from 'react-icons/fa';
 
 const CookiesPage = () => {
   return (

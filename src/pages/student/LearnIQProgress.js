@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, query, where, getDocs, orderBy } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
-import { FiBarChart2, FiCheckCircle, FiClock, FiAward, FiBookOpen, FiAward as FiGraduationCap, FiCalendar, FiTrendingUp, FiCircle, FiAward as FiTrophy, FiTarget, FiClock as FiClock3, FiBook, FiCalendar as FiCalendarDays } from 'react-icons/fi/index.js';
+import { FiBarChart2, FiCheckCircle, FiClock, FiAward, FiBookOpen, FiAward as FiGraduationCap, FiCalendar, FiTrendingUp, FiCircle, FiAward as FiTrophy, FiTarget, FiClock as FiClock3, FiBook, FiCalendar as FiCalendarDays } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
 export default function LearnIQProgress() {

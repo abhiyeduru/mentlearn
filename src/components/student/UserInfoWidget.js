@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { collection, query, where, getDocs, doc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
-import { FaClock, FaUsers, FaListAlt, FaUserCheck, FaUser, FaExclamationTriangle, FaChalkboardTeacher } from 'react-icons/fa/index.esm.js';
+import { FaClock, FaUsers, FaListAlt, FaUserCheck, FaUser, FaExclamationTriangle, FaChalkboardTeacher } from 'react-icons/fa';
 
 const UserInfoWidget = ({ darkMode }) => {
   const { currentUser } = useAuth();

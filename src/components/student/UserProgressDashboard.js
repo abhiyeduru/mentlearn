@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
-import { FiBookOpen, FiCheckCircle, FiClock, FiTrendingUp, FiAward, FiRefreshCw } from 'react-icons/fi/index.js';
+import { FiBookOpen, FiCheckCircle, FiClock, FiTrendingUp, FiAward, FiRefreshCw } from 'react-icons/fi';
 
 /**
  * UserProgressDashboard Component

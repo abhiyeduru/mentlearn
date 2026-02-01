@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import { FiChevronRight, FiPlay, FiCheckCircle, FiX, FiMessageSquare, FiChevronLeft, FiPause, FiVolumeX, FiVolume2, FiVolume1, FiMaximize, FiDownload, FiExternalLink, FiThumbsUp, FiThumbsDown, FiList } from 'react-icons/fi/index.js';
+import { FiChevronRight, FiPlay, FiCheckCircle, FiX, FiMessageSquare, FiChevronLeft, FiPause, FiVolumeX, FiVolume2, FiVolume1, FiMaximize, FiDownload, FiExternalLink, FiThumbsUp, FiThumbsDown, FiList } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { collection, query, where, getDocs, doc, getDoc, addDoc, updateDoc, serverTimestamp } from 'firebase/firestore';

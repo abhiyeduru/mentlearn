@@ -3,7 +3,7 @@ import { collection, query, where, getDocs, addDoc, orderBy, doc, getDoc, update
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMessageSquare, FiSend, FiThumbsUp, FiUser, FiClock, FiMoreVertical, FiEdit2, FiTrash2, FiAlertCircle } from 'react-icons/fi/index.js';
+import { FiMessageSquare, FiSend, FiThumbsUp, FiUser, FiClock, FiMoreVertical, FiEdit2, FiTrash2, FiAlertCircle } from 'react-icons/fi';
 
 export default function DiscussionForum({ courseId }) {
   const { currentUser } = useAuth();

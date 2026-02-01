@@ -19,7 +19,7 @@ import {
   FaInfoCircle,
   FaUserPlus,
   FaSignInAlt
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';

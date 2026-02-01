@@ -18,7 +18,7 @@ import {
   FiAlertCircle,
   FiVideo,
   FiFileText
-} from 'react-icons/fi/index.js';
+} from 'react-icons/fi';
 
 export default function LearnIQSupport() {
   const { currentUser } = useAuth();

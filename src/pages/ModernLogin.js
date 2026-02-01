@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.js';
 import { handleFirebaseError } from '../utils/errorHandler.js';
 import { useTheme } from '../contexts/ThemeContext.js';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaMoon, FaSun, FaEnvelope, FaLock } from 'react-icons/fa/index.esm.js';
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaMoon, FaSun, FaEnvelope, FaLock } from 'react-icons/fa';
 
 export default function ModernLogin() {
   const [email, setEmail] = useState('');

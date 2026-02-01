@@ -4,7 +4,7 @@ import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { useTheme } from '../../contexts/ThemeContext.js';
-import { FaUser, FaCamera, FaSpinner } from 'react-icons/fa/index.esm.js';
+import { FaUser, FaCamera, FaSpinner } from 'react-icons/fa';
 
 const ProfileImageUpload = ({ currentImageUrl, onImageUpdate }) => {
   const [image, setImage] = useState(null);

@@ -19,7 +19,7 @@ import {
   FaChartPie,
   FaChartLine,
   FaTimes
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 
 // Register ChartJS components
 ChartJS.register(

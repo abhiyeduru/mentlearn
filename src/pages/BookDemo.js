@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaArrowLeft, FaCheck, FaGraduationCap, FaCode, FaUsers } from 'react-icons/fa/index.esm.js';
+import { FaArrowLeft, FaCheck, FaGraduationCap, FaCode, FaUsers } from 'react-icons/fa';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase/firebase.js';
 import ChatUsButton from '../components/ChatUsButton.js';

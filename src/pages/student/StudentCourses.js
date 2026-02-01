@@ -4,7 +4,7 @@ import { db } from '../../firebase/firebase.js';
 import { collection, getDocs, query, where, addDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiBook, FiCheckCircle, FiClock, FiPlay, FiSearch, FiLock } from 'react-icons/fi/index.js';
+import { FiBook, FiCheckCircle, FiClock, FiPlay, FiSearch, FiLock } from 'react-icons/fi';
 import LearnIQNavbar from '../../components/student/LearnIQNavbar.js';
 import LoadingSpinner from '../../components/common/LoadingSpinner.js';
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { useTheme } from '../../contexts/ThemeContext.js';
-import { FaSun, FaMoon, FaBars, FaTimes, FaSignOutAlt } from 'react-icons/fa/index.esm.js';
+import { FaSun, FaMoon, FaBars, FaTimes, FaSignOutAlt } from 'react-icons/fa';
 import MenteoLogo from '../MenteoLogo.js';
 
 const SimpleNavbar = () => {

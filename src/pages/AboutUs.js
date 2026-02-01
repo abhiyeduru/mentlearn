@@ -18,7 +18,7 @@ import {
   FaEnvelope,
   FaSignInAlt,
   FaUserPlus
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const AboutUs = () => {

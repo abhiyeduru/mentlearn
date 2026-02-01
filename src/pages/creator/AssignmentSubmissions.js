@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { 
   FiCalendar, FiUser, FiBook, FiCheckCircle, FiClock, FiAlertCircle,
   FiExternalLink, FiEdit, FiSearch, FiFilter, FiDownload, FiX
-} from 'react-icons/fi/index.js';
+} from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function AssignmentSubmissions() {

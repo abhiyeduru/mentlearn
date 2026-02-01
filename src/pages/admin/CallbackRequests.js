@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { collection, query, orderBy, onSnapshot, doc, updateDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
-import { FaPhone, FaEnvelope, FaUser, FaGraduationCap, FaClock, FaCheckCircle, FaSpinner } from 'react-icons/fa/index.esm.js';
+import { FaPhone, FaEnvelope, FaUser, FaGraduationCap, FaClock, FaCheckCircle, FaSpinner } from 'react-icons/fa';
 
 const CallbackRequests = () => {
   const [requests, setRequests] = useState([]);

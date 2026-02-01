@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { doc, getDoc, collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
-import { FiBookOpen, FiClock, FiCheckCircle, FiPlay, FiFileText, FiUsers, FiMessageSquare, FiChevronRight, FiLock, FiAlertTriangle, FiChevronDown, FiExternalLink, FiDownload, FiBook } from 'react-icons/fi/index.js';
+import { FiBookOpen, FiClock, FiCheckCircle, FiPlay, FiFileText, FiUsers, FiMessageSquare, FiChevronRight, FiLock, FiAlertTriangle, FiChevronDown, FiExternalLink, FiDownload, FiBook } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import DiscussionForum from '../../components/student/DiscussionForum.js';
 

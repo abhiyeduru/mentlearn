@@ -3,7 +3,7 @@ import { doc, getDoc, updateDoc, setDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import Navbar from '../../components/student/Navbar.js';
-import { FaWhatsapp, FaFacebook, FaTwitter, FaLinkedin, FaCopy, FaInstagram, FaRegCheckCircle } from 'react-icons/fa/index.esm.js';
+import { FaWhatsapp, FaFacebook, FaTwitter, FaLinkedin, FaCopy, FaInstagram, FaRegCheckCircle } from 'react-icons/fa';
 
 export default function ReferAndEarn() {
   const { currentUser } = useAuth();

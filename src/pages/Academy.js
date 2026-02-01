@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   FaArrowRight, FaBookOpen, FaUserGraduate, FaCertificate, FaRocket, FaUsers, FaClock, FaStar, FaCalendarAlt, FaLaptopCode, FaArrowLeft 
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 import MenteoLogo from '../components/MenteoLogo.js';
 
 const featuredCourses = [

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.js';
 import { handleFirebaseError } from '../utils/errorHandler.js';
-import { FaArrowLeft, FaGoogle } from 'react-icons/fa/index.esm.js';
+import { FaArrowLeft, FaGoogle } from 'react-icons/fa';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider, db } from '../firebase/firebase.js';
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';

@@ -68,10 +68,10 @@ try {
 const db = admin.firestore();
 
 // === Razorpay client ===
-if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_SECRET) {
-  console.warn('Razorpay keys missing. Set RAZORPAY_KEY_ID and RAZORPAY_SECRET in env to create real orders.');
+if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+  console.warn('Razorpay keys missing. Set RAZORPAY_KEY_ID and RAZORPAY_KEY_SECRET in env to create real orders.');
 }
-const razorpay = new Razorpay({ key_id: process.env.RAZORPAY_KEY_ID || 'rzp_test', key_secret: process.env.RAZORPAY_SECRET || 'secret' });
+const razorpay = new Razorpay({ key_id: process.env.RAZORPAY_KEY_ID || 'rzp_test', key_secret: process.env.RAZORPAY_KEY_SECRET || 'secret' });
 
 // === Express app ===
 const app = express();

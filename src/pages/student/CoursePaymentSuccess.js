@@ -4,7 +4,7 @@ import { doc, getDoc, updateDoc, setDoc, collection, addDoc, serverTimestamp } f
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import Navbar from '../../components/student/Navbar.js';
-import { FaCheckCircle, FaBook, FaArrowRight } from 'react-icons/fa/index.esm.js';
+import { FaCheckCircle, FaBook, FaArrowRight } from 'react-icons/fa';
 
 export default function CoursePaymentSuccess() {
   const { courseId } = useParams();

@@ -3,7 +3,7 @@ import { collection, getDocs, deleteDoc, doc, getFirestore, setDoc } from 'fireb
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { FaPlus, FaTrash } from 'react-icons/fa/index.esm.js';
+import { FaPlus, FaTrash } from 'react-icons/fa';
 
 
 const CreatorSchema = Yup.object().shape({

@@ -3,7 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { doc, getDoc, collection, query, where, getDocs, addDoc, updateDoc, Timestamp } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
-import { FiCalendar, FiClock, FiAlertCircle, FiCheckCircle, FiFileText, FiUpload, FiArrowLeft, FiUser, FiBook, FiExternalLink, FiX } from 'react-icons/fi/index.js';
+import { FiCalendar, FiClock, FiAlertCircle, FiCheckCircle, FiFileText, FiUpload, FiArrowLeft, FiUser, FiBook, FiExternalLink, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function AssignmentDetail() {

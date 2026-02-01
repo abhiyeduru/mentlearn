@@ -4,7 +4,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import Navbar from '../../components/student/Navbar.js';
-import { FaGraduationCap, FaCalendarAlt, FaUserGraduate, FaRupeeSign, FaCheckCircle } from 'react-icons/fa/index.esm.js';
+import { FaGraduationCap, FaCalendarAlt, FaUserGraduate, FaRupeeSign, FaCheckCircle } from 'react-icons/fa';
 
 export default function CourseEnrollment() {
   const { courseId } = useParams();

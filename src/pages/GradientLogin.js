@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext.js';
 import { motion } from 'framer-motion';
-import { FaEye, FaEyeSlash, FaArrowLeft, FaGoogle } from 'react-icons/fa/index.esm.js';
+import { FaEye, FaEyeSlash, FaArrowLeft, FaGoogle } from 'react-icons/fa';
 import MenteoLogo from '../components/MenteoLogo.js';
 import ChatUsButton from '../components/ChatUsButton.js';
 import { signInWithPopup } from 'firebase/auth';

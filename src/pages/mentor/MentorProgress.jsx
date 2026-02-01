@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, query, where, getDocs, orderBy } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
-import { FiBarChart2, FiCheckCircle, FiClock, FiAward, FiUsers, FiTrendingUp, FiTarget, FiBook, FiCalendar, FiActivity } from 'react-icons/fi/index.js';
+import { FiBarChart2, FiCheckCircle, FiClock, FiAward, FiUsers, FiTrendingUp, FiTarget, FiBook, FiCalendar, FiActivity } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 import Navbar from '../../components/mentor/Navbar.js';

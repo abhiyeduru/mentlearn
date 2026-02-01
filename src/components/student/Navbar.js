@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { useTheme } from '../../contexts/ThemeContext.js';
-import { FaBook, FaChartLine, FaBriefcase, FaUser, FaSignOutAlt, FaBars, FaTimes, FaMoon, FaSun, FaClipboardList, FaCog, FaLifeRing } from 'react-icons/fa/index.esm.js';
+import { FaBook, FaChartLine, FaBriefcase, FaUser, FaSignOutAlt, FaBars, FaTimes, FaMoon, FaSun, FaClipboardList, FaCog, FaLifeRing } from 'react-icons/fa';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, query, where, orderBy, getDocs, doc, updateDoc, addDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
-import { FiBell, FiBookOpen, FiCalendar, FiCheckCircle, FiClock, FiMessageCircle, FiTrash2, FiFilter, FiX, FiAlertCircle, FiBook, FiUsers, FiFileText } from 'react-icons/fi/index.js';
+import { FiBell, FiBookOpen, FiCalendar, FiCheckCircle, FiClock, FiMessageCircle, FiTrash2, FiFilter, FiX, FiAlertCircle, FiBook, FiUsers, FiFileText } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/mentor/Navbar.js';

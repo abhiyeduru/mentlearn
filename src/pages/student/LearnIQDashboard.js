@@ -10,7 +10,7 @@ import {
 } from 'recharts';
 // // import Calendar from 'react-calendar';
 // // import 'react-calendar/dist/Calendar.css';
-import { FiBookOpen, FiAward, FiClock, FiCalendar, FiBarChart2, FiUser, FiSettings, FiBell, FiFileText, FiGrid, FiList, FiChevronRight, FiStar, FiArrowRight, FiCheck, FiPlay, FiAlertTriangle, FiActivity, FiDownload, FiShare2, FiPlusCircle, FiBook } from 'react-icons/fi/index.js';
+import { FiBookOpen, FiAward, FiClock, FiCalendar, FiBarChart2, FiUser, FiSettings, FiBell, FiFileText, FiGrid, FiList, FiChevronRight, FiStar, FiArrowRight, FiCheck, FiPlay, FiAlertTriangle, FiActivity, FiDownload, FiShare2, FiPlusCircle, FiBook } from 'react-icons/fi';
 import MenteoLogo from '../../components/MenteoLogo.js';
 
 const COLORS = ['#E4E0FF', '#CDE8E5', '#F9D6D6', '#FFE8C8'];

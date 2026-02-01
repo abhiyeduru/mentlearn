@@ -22,7 +22,7 @@ import {
   FiPhone,
   FiMapPin,
   FiSave
-} from 'react-icons/fi/index.js';
+} from 'react-icons/fi';
 
 export default function LearnIQSettings() {
   const { currentUser, logout } = useAuth();

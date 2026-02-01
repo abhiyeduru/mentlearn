@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../firebase/firebase.js';
 import { uploadToCloudinary } from '../utils/cloudinary.js';
-import { FaPlus, FaEdit, FaTrash, FaSave, FaTimes, FaUpload, FaStar } from 'react-icons/fa/index.esm.js';
+import { FaPlus, FaEdit, FaTrash, FaSave, FaTimes, FaUpload, FaStar } from 'react-icons/fa';
 
 const AdminTestimonials = () => {
   const [testimonials, setTestimonials] = useState([]);

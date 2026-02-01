@@ -13,7 +13,7 @@ import {
   FaRegLightbulb,
   FaRegClock,
   FaTasks
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 import MenteoLogo from '../components/MenteoLogo.js';
 
 const outcomes = [

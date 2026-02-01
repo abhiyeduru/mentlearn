@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import LearnIQNavbar from './LearnIQNavbar.js';
-import { FiBell, FiSearch } from 'react-icons/fi/index.js';
+import { FiBell, FiSearch } from 'react-icons/fi';
 import { useAuth } from '../../contexts/AuthContext.js';
 
 export default function LearnIQDashboardLayout() {

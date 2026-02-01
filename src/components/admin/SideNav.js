@@ -22,7 +22,7 @@ import {
   FaPhoneAlt,
   FaUniversity,
   FaBriefcase
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 import Logo from '../common/Logo';
 
 export default function SideNav() {

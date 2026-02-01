@@ -5,7 +5,7 @@ import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 import { db, googleProvider } from '../firebase/firebase.js';
 import { createUserWithEmailAndPassword, updateProfile, signInWithPopup } from 'firebase/auth';
 import { auth } from '../firebase/firebase.js';
-import { FaArrowLeft, FaGoogle } from 'react-icons/fa/index.esm.js';
+import { FaArrowLeft, FaGoogle } from 'react-icons/fa';
 
 export default function Signup() {
   const [email, setEmail] = useState('');

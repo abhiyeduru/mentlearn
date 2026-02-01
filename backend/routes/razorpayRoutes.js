@@ -75,7 +75,7 @@ const computeCouponDiscount = (price, coupon) => {
 // Create Razorpay order for course purchase
 router.post('/create-order', verifyFirebaseToken, async (req, res) => {
   console.log('📦 Creating Razorpay order...');
-  
+
   try {
     const { courseId, couponCode } = req.body;
     const userId = req.user.uid;
@@ -94,7 +94,7 @@ router.post('/create-order', verifyFirebaseToken, async (req, res) => {
     }
 
     const courseData = courseDoc.data();
-    
+
     // Check if course is published
     if (courseData.published === false) {
       return res.status(400).json({ error: 'This course is not available for purchase' });
@@ -132,7 +132,7 @@ router.post('/create-order', verifyFirebaseToken, async (req, res) => {
     // Create Razorpay order
     // Receipt must be max 40 characters
     const shortReceipt = `rcpt_${Date.now()}_${courseId.substring(0, 10)}`.substring(0, 40);
-    
+
     const orderOptions = {
       amount: amountInPaise,
       currency: 'INR',
@@ -195,19 +195,19 @@ router.post('/create-order', verifyFirebaseToken, async (req, res) => {
         gstAmount: gstAmount
       }
     });
-    
+
     // Log analytics event
     console.log('📊 Analytics: order_created', {
       userId,
       courseId,
-      amount: finalPrice
+      amount: finalPayable
     });
 
   } catch (error) {
     console.error('❌ Error creating Razorpay order:', error);
-    res.status(500).json({ 
+    res.status(500).json({
       error: 'Failed to create order',
-      details: error.message 
+      details: error.message
     });
   }
 });
@@ -264,7 +264,7 @@ router.post('/validate-coupon', verifyFirebaseToken, async (req, res) => {
 // Verify Razorpay payment signature and enroll user
 router.post('/verify-payment', verifyFirebaseToken, async (req, res) => {
   console.log('🔐 Verifying payment...');
-  
+
   try {
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
     const userId = req.user.uid;
@@ -283,7 +283,7 @@ router.post('/verify-payment', verifyFirebaseToken, async (req, res) => {
 
     if (expectedSignature !== razorpay_signature) {
       console.error('❌ Payment signature verification failed');
-      
+
       // Update order status
       await admin.firestore().collection('razorpayOrders').doc(razorpay_order_id).update({
         status: 'failed',
@@ -293,10 +293,10 @@ router.post('/verify-payment', verifyFirebaseToken, async (req, res) => {
 
       // Log analytics event
       console.log('📊 Analytics: payment_failed', { userId, reason: 'signature_mismatch' });
-      
-      return res.status(400).json({ 
-        ok: false, 
-        error: 'Payment verification failed' 
+
+      return res.status(400).json({
+        ok: false,
+        error: 'Payment verification failed'
       });
     }
 
@@ -304,7 +304,7 @@ router.post('/verify-payment', verifyFirebaseToken, async (req, res) => {
 
     // Fetch order details
     const orderDoc = await admin.firestore().collection('razorpayOrders').doc(razorpay_order_id).get();
-    
+
     if (!orderDoc.exists) {
       return res.status(404).json({ error: 'Order not found' });
     }
@@ -368,11 +368,11 @@ router.post('/verify-payment', verifyFirebaseToken, async (req, res) => {
     // Update user's enrolled courses list (create user if doesn't exist)
     const userRef = admin.firestore().collection('users').doc(userId);
     const userDoc = await userRef.get();
-    
+
     if (userDoc.exists) {
       const userData = userDoc.data();
       const enrolledCourses = userData.enrolledCourses || [];
-      
+
       if (!enrolledCourses.includes(orderData.courseId)) {
         await userRef.update({
           enrolledCourses: admin.firestore.FieldValue.arrayUnion(orderData.courseId),
@@ -433,18 +433,18 @@ router.post('/verify-payment', verifyFirebaseToken, async (req, res) => {
 
   } catch (error) {
     console.error('❌ Error verifying payment:', error);
-    
+
     // Log analytics event
-    console.log('📊 Analytics: payment_failed', { 
-      userId: req.user?.uid, 
+    console.log('📊 Analytics: payment_failed', {
+      userId: req.user?.uid,
       reason: 'server_error',
-      error: error.message 
+      error: error.message
     });
-    
-    res.status(500).json({ 
+
+    res.status(500).json({
       ok: false,
       error: 'Payment verification failed',
-      details: error.message 
+      details: error.message
     });
   }
 });
@@ -453,7 +453,7 @@ router.post('/verify-payment', verifyFirebaseToken, async (req, res) => {
 // Razorpay webhook for payment.captured events (for redundancy)
 router.post('/webhook', express.raw({ type: 'application/json' }), async (req, res) => {
   console.log('🔔 Webhook received from Razorpay');
-  
+
   try {
     const webhookSignature = req.headers['x-razorpay-signature'];
     const webhookSecret = process.env.RAZORPAY_WEBHOOK_SECRET;

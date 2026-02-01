@@ -6,7 +6,7 @@ import { uploadCourseThumbnailWithFallback } from '../../utils/cloudinary.js';
 import { uploadImage as uploadToFirebase } from '../../utils/storage.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import Navbar from '../../components/admin/Navbar.js';
-import { FaPlus, FaEdit, FaTrash, FaEye, FaUserPlus, FaTasks, FaFileAlt, FaBook, FaUpload } from 'react-icons/fa/index.esm.js';
+import { FaPlus, FaEdit, FaTrash, FaEye, FaUserPlus, FaTasks, FaFileAlt, FaBook, FaUpload } from 'react-icons/fa';
 import { Formik, Form, Field, ErrorMessage, FieldArray } from 'formik';
 import * as Yup from 'yup';
 

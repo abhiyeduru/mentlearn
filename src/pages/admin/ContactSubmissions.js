@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { collection, query, orderBy, onSnapshot, doc, updateDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
-import { FaEnvelope, FaEnvelopeOpen, FaCheck, FaExclamationTriangle } from 'react-icons/fa/index.esm.js';
+import { FaEnvelope, FaEnvelopeOpen, FaCheck, FaExclamationTriangle } from 'react-icons/fa';
 
 const ContactSubmissions = () => {
   const { currentUser, userRole } = useAuth();

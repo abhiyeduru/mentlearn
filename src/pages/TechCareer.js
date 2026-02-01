@@ -6,7 +6,7 @@ import {
   FaBriefcase, FaMapMarkerAlt, FaClock, FaGraduationCap, FaCode, 
   FaUserTie, FaStar, FaRobot, FaChartLine, FaAward, FaBuilding,
   FaLinkedin, FaGithub, FaTwitter, FaPlay, FaArrowRight
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 import MenteoLogo from '../components/MenteoLogo.js';
 
 const careerSteps = [

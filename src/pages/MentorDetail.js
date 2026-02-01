@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebase/firebase.js';
 import { motion } from 'framer-motion';
-import { FaQuoteLeft, FaLinkedin, FaTwitter, FaGlobe, FaCheckCircle, FaStar, FaUsers, FaVideo, FaClock, FaCalendar, FaGraduationCap, FaHome } from 'react-icons/fa/index.esm.js';
+import { FaQuoteLeft, FaLinkedin, FaTwitter, FaGlobe, FaCheckCircle, FaStar, FaUsers, FaVideo, FaClock, FaCalendar, FaGraduationCap, FaHome } from 'react-icons/fa';
 
 // Add Inter font
 const style = document.createElement('style');

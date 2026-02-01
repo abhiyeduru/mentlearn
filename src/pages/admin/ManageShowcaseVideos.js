@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 import { db, cloudinaryConfig } from '../../firebase/firebase.js';
 import Navbar from '../../components/admin/Navbar.js';
-import { FaPlus, FaEdit, FaTrash, FaSave, FaTimes, FaVideo, FaYoutube, FaStar, FaUpload, FaLink } from 'react-icons/fa/index.esm.js';
+import { FaPlus, FaEdit, FaTrash, FaSave, FaTimes, FaVideo, FaYoutube, FaStar, FaUpload, FaLink } from 'react-icons/fa';
 
 const ManageShowcaseVideos = () => {
   const [videos, setVideos] = useState([]);

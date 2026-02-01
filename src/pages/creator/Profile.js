@@ -3,7 +3,7 @@ import { getFirestore, doc, getDoc, updateDoc, setDoc } from 'firebase/firestore
 import { useAuth } from '../../contexts/AuthContext.js';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { FaEdit, FaCamera, FaTrash, FaUpload } from 'react-icons/fa/index.esm.js';
+import { FaEdit, FaCamera, FaTrash, FaUpload } from 'react-icons/fa';
 import { uploadImageWithFallback } from '../../utils/cloudinary.js';
 
 const ProfileSchema = Yup.object().shape({

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs, doc, setDoc, updateDoc, deleteDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
-import { FaPlus, FaEdit, FaTrash, FaCheck, FaTimes } from 'react-icons/fa/index.esm.js';
+import { FaPlus, FaEdit, FaTrash, FaCheck, FaTimes } from 'react-icons/fa';
 
 export default function ManageCoupons() {
   const [coupons, setCoupons] = useState([]);

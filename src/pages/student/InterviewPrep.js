@@ -3,7 +3,7 @@ import { collection, query, where, getDocs, doc, getDoc } from 'firebase/firesto
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import Navbar from '../../components/student/Navbar.js';
-import { FaChevronDown, FaChevronUp, FaStar, FaRegStar, FaGraduationCap } from 'react-icons/fa/index.esm.js';
+import { FaChevronDown, FaChevronUp, FaStar, FaRegStar, FaGraduationCap } from 'react-icons/fa';
 import { safeRender } from '../../utils/renderUtils.js';
 
 export default function InterviewPrep() {

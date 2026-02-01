@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
-import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaClock, FaSpinner } from 'react-icons/fa/index.esm.js';
+import { FaUser, FaPhone, FaEnvelope, FaGraduationCap, FaClock, FaSpinner } from 'react-icons/fa';
 import { db } from '../../firebase/firebase.js';
 
 const Leads = () => {

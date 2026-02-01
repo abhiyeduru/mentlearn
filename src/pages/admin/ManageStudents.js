@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { db, auth } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import Navbar from '../../components/admin/Navbar.js';
-import { FaPlus, FaEdit, FaTrash, FaUserCheck, FaDownload } from 'react-icons/fa/index.esm.js';
+import { FaPlus, FaEdit, FaTrash, FaUserCheck, FaDownload } from 'react-icons/fa';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { collection, query, where, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
-import { FaUserPlus, FaTrash, FaEnvelope } from 'react-icons/fa/index.esm.js';
+import { FaUserPlus, FaTrash, FaEnvelope } from 'react-icons/fa';
 
 const ManageDataAnalysts = () => {
   const { createDataAnalyst, userRole } = useAuth();

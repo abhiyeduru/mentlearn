@@ -4,7 +4,7 @@ import { doc, getDoc, collection, query, where, getDocs, orderBy } from 'firebas
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import Navbar from '../../components/mentor/Navbar.js';
-import { FaArrowLeft, FaCalendarAlt, FaChartLine, FaBookOpen, FaFileAlt } from 'react-icons/fa/index.esm.js';
+import { FaArrowLeft, FaCalendarAlt, FaChartLine, FaBookOpen, FaFileAlt } from 'react-icons/fa';
 
 export default function StudentView() {
   const { studentId } = useParams();

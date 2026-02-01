@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { FiHome, FiBookOpen, FiFileText, FiUser, FiSettings, FiLogOut, FiBell, FiCalendar, FiAward, FiHelpCircle, FiMenu, FiX, FiChevronRight, FiBarChart2 } from 'react-icons/fi/index.js';
+import { FiHome, FiBookOpen, FiFileText, FiUser, FiSettings, FiLogOut, FiBell, FiCalendar, FiAward, FiHelpCircle, FiMenu, FiX, FiChevronRight, FiBarChart2 } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { doc, getDoc } from 'firebase/firestore';

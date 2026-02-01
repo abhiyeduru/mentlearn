@@ -4,7 +4,7 @@ import { doc, getDoc, updateDoc, collection, getDocs, query, where } from 'fireb
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { uploadImageWithFallback } from '../../utils/cloudinary.js';
-import { FiMail, FiPhone, FiMapPin, FiGlobe, FiAward, FiEdit2, FiCheck, FiX, FiCamera, FiUpload, FiCalendar, FiClock, FiFileText, FiBook } from 'react-icons/fi/index.js';
+import { FiMail, FiPhone, FiMapPin, FiGlobe, FiAward, FiEdit2, FiCheck, FiX, FiCamera, FiUpload, FiCalendar, FiClock, FiFileText, FiBook } from 'react-icons/fi';
 
 export default function LearnIQProfile() {
   const { currentUser } = useAuth();

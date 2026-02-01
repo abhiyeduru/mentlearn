@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FiCalendar, FiChevronLeft, FiChevronRight, FiClock, FiPlus, FiTrash2, FiEdit, FiX, FiCheck, FiAlertCircle, FiBook, FiFileText, FiMessageCircle, FiUsers, FiVideo } from 'react-icons/fi/index.js';
+import { FiCalendar, FiChevronLeft, FiChevronRight, FiClock, FiPlus, FiTrash2, FiEdit, FiX, FiCheck, FiAlertCircle, FiBook, FiFileText, FiMessageCircle, FiUsers, FiVideo } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, isToday, isSameDay, isSameMonth, addMonths, subMonths, startOfWeek, endOfWeek } from 'date-fns';

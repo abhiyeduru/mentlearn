@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaPhone, FaUser, FaEnvelope, FaGraduationCap, FaCheckCircle, FaArrowLeft } from 'react-icons/fa/index.esm.js';
+import { FaPhone, FaUser, FaEnvelope, FaGraduationCap, FaCheckCircle, FaArrowLeft } from 'react-icons/fa';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase/firebase.js';
 import MenteoLogo from '../components/MenteoLogo';

@@ -3,7 +3,7 @@ import { collection, query, where, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase/firebase.js';
 import CourseCard from '../components/CourseCard.jsx';
 import { Link } from 'react-router-dom';
-import { FaGraduationCap, FaLaptopCode, FaChalkboardTeacher, FaArrowRight } from 'react-icons/fa/index.esm.js';
+import { FaGraduationCap, FaLaptopCode, FaChalkboardTeacher, FaArrowRight } from 'react-icons/fa';
 
 export default function Home() {
   const [courses, setCourses] = useState([]);

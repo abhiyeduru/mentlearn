@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { collection, query, where, getDocs, doc, getDoc, orderBy, addDoc, updateDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
-import { FiCalendar, FiClock, FiAlertCircle, FiCheckCircle, FiFileText, FiFilter, FiSearch, FiChevronRight, FiX, FiChevronDown, FiUpload, FiUsers, FiEdit, FiTrash2, FiPlus } from 'react-icons/fi/index.js';
+import { FiCalendar, FiClock, FiAlertCircle, FiCheckCircle, FiFileText, FiFilter, FiSearch, FiChevronRight, FiX, FiChevronDown, FiUpload, FiUsers, FiEdit, FiTrash2, FiPlus } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function MentorAssignments() {

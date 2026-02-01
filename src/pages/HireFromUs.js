@@ -13,7 +13,7 @@ import {
   FaBars,
   FaTimes,
   FaTwitter
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase/firebase.js';
 import MenteoLogo from '../components/MenteoLogo.js';

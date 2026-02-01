@@ -10,7 +10,7 @@ import {
   FaCog,
   FaBars,
   FaTimes
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 
 const AdminDashboard = () => {
   const { userRole } = useAuth(); // Remove unused currentUser

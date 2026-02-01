@@ -4,7 +4,7 @@ import { collection, query, where, getDocs, deleteDoc, doc, orderBy } from 'fire
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import Navbar from '../../components/mentor/Navbar';
-import { FaEye, FaEdit, FaTrash, FaUserPlus } from 'react-icons/fa/index.esm.js';
+import { FaEye, FaEdit, FaTrash, FaUserPlus } from 'react-icons/fa';
 
 export default function Interviews() {
   const { currentUser } = useAuth();

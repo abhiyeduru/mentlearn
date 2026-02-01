@@ -4,7 +4,7 @@ import { cloudinaryConfig } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { Formik, Field, ErrorMessage, FieldArray } from 'formik';
 import * as Yup from 'yup';
-import { FaPlus, FaEdit, FaTrash, FaUpload, FaFileAlt, FaBook, FaTasks } from 'react-icons/fa/index.esm.js';
+import { FaPlus, FaEdit, FaTrash, FaUpload, FaFileAlt, FaBook, FaTasks } from 'react-icons/fa';
 
 const CourseSchema = Yup.object().shape({
   title: Yup.string().required('Title is required'),

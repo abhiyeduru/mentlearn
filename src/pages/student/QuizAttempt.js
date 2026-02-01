@@ -4,7 +4,7 @@ import { doc, getDoc, addDoc, collection, serverTimestamp } from 'firebase/fires
 import { db } from '../../firebase/firebase.js';
 import { useAuth } from '../../contexts/AuthContext.js';
 import Navbar from '../../components/student/Navbar.js';
-import { FaArrowLeft, FaCheck, FaTimes, FaRedo } from 'react-icons/fa/index.esm.js';
+import { FaArrowLeft, FaCheck, FaTimes, FaRedo } from 'react-icons/fa';
 
 export default function QuizAttempt() {
   const { quizId } = useParams();

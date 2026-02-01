@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaComments, FaWhatsapp } from 'react-icons/fa/index.esm.js';
+import { FaComments, FaWhatsapp } from 'react-icons/fa';
 
 export default function ChatUsButton({ label = 'Chat Us', variant = 'default' }) {
   const isWhatsApp = variant === 'whatsapp';

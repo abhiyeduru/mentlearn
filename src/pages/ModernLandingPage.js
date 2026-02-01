@@ -27,7 +27,7 @@ import {
   FaInfoCircle,
   FaEnvelope,
   FaCreditCard
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 
 const ModernLandingPage = () => {
   const [darkMode, setDarkMode] = useState(false);

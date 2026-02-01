@@ -6,7 +6,7 @@ import { getFirestore } from 'firebase/firestore';
 import { 
   FaBook, FaUsers, FaStar, FaRupeeSign, FaClock, FaChartLine,
   FaPlayCircle, FaCertificate, FaGraduationCap
-} from 'react-icons/fa/index.esm.js';
+} from 'react-icons/fa';
 
 const OurCourses = () => {
   const [courses, setCourses] = useState([]);

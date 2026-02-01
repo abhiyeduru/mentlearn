@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FiAward, FiCalendar, FiUser, FiBook, FiShare2, FiDownload, FiArrowLeft, FiLink, FiMail } from 'react-icons/fi/index.js';
+import { FiAward, FiCalendar, FiUser, FiBook, FiShare2, FiDownload, FiArrowLeft, FiLink, FiMail } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { useAuth } from '../../contexts/AuthContext.js';
 import { collection, query, where, getDocs, doc, getDoc } from 'firebase/firestore';

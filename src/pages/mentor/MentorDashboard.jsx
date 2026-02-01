@@ -12,7 +12,7 @@ import {
   FiUsers, FiFileText, FiCheckCircle, FiClock, FiBarChart2, 
   FiBell, FiCalendar, FiAward, FiBookOpen, FiTrendingUp,
   FiChevronRight, FiActivity, FiStar, FiTarget
-} from 'react-icons/fi/index.js';
+} from 'react-icons/fi';
 
 const COLORS = ['#4F46E5', '#10B981', '#F59E0B', '#EF4444'];
 

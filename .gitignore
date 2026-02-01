@@ -21,10 +21,12 @@ node_modules/
 !.env.example
 !.env.production
 
-# Firebase
-*.json
+# Firebase - exclude credentials but allow package files
 firebase-adminsdk*.json
 serviceAccountKey.json
+mentor-app-*.json
+!package.json
+!package-lock.json
 
 # Logs
 npm-debug.log*
