@@ -11,7 +11,7 @@
 
 ### Live Deployments:
 - **Frontend**: https://mentlearn-5ddqc16tm-abhis-projects-9c290dd6.vercel.app
-- **Backend**: https://new-version-mentlearn-3.onrender.com
+- **Backend**: https://mentlearn-backend-1212.onrender.com
 - **Vercel Account**: `mentneo` (abhis-projects-9c290dd6)
 - **Project Name**: `mentlearn`
 
@@ -78,8 +78,8 @@ Go to **Project Settings** → **Environment Variables** and add:
 
 ```env
 # Backend API
-REACT_APP_API_URL=https://new-version-mentlearn-3.onrender.com
-REACT_APP_API_BASE=https://new-version-mentlearn-3.onrender.com/api
+REACT_APP_API_URL=https://mentlearn-backend-1212.onrender.com
+REACT_APP_API_BASE=https://mentlearn-backend-1212.onrender.com/api
 
 # Razorpay LIVE
 REACT_APP_RAZORPAY_KEY_ID=rzp_live_RW6hQg5iL5Thm2
@@ -143,7 +143,7 @@ This ensures:
 
 ### Prerequisites
 - Render account connected to GitHub
-- Backend already deployed at: `https://new-version-mentlearn-3.onrender.com`
+- Backend already deployed at: `https://mentlearn-backend-1212.onrender.com`
 
 ### Steps (if redeploying):
 
@@ -162,7 +162,7 @@ If auto-deploy is enabled, Render will automatically redeploy when you push to `
 #### 3. Manual Deploy (if needed)
 
 1. Go to [Render Dashboard](https://dashboard.render.com/)
-2. Find your service: `new-version-mentlearn-3`
+2. Find your service: `mentlearn-backend-1212`
 3. Click **"Manual Deploy"** → **"Deploy latest commit"**
 
 ---
@@ -288,8 +288,8 @@ https://mentlearn-5ddqc16tm-abhis-projects-9c290dd6.vercel.app,http://localhost:
 | Service | Platform | URL |
 |---------|----------|-----|
 | Frontend | Vercel | https://mentlearn-5ddqc16tm-abhis-projects-9c290dd6.vercel.app |
-| Backend API | Render | https://new-version-mentlearn-3.onrender.com |
-| Health Check | Render | https://new-version-mentlearn-3.onrender.com/api/health |
+| Backend API | Render | https://mentlearn-backend-1212.onrender.com |
+| Health Check | Render | https://mentlearn-backend-1212.onrender.com/api/health |
 | Vercel Dashboard | Vercel | https://vercel.com/abhis-projects-9c290dd6/mentlearn |
 
 ---
@@ -334,7 +334,7 @@ cat .vercel/project.json
 ### Test API Connection:
 ```bash
 # Test backend health
-curl https://new-version-mentlearn-3.onrender.com/api/health
+curl https://mentlearn-backend-1212.onrender.com/api/health
 
 # Test from frontend (browser console)
 fetch(process.env.REACT_APP_API_URL + '/api/health')
