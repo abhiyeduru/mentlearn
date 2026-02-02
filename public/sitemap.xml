@@ -6,111 +6,111 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Main Pages -->
   <url>
-    <loc>https://mentlearn.vercel.app/</loc>
+    <loc>https://www.mentlearn.in/</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/about</loc>
+    <loc>https://www.mentlearn.in/about</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/courses</loc>
+    <loc>https://www.mentlearn.in/courses</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/mentors</loc>
+    <loc>https://www.mentlearn.in/mentors</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/live-sessions</loc>
+    <loc>https://www.mentlearn.in/live-sessions</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/blog</loc>
+    <loc>https://www.mentlearn.in/blog</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/contact</loc>
+    <loc>https://www.mentlearn.in/contact</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/pricing</loc>
+    <loc>https://www.mentlearn.in/pricing</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/reviews</loc>
+    <loc>https://www.mentlearn.in/reviews</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/partner-with-us</loc>
+    <loc>https://www.mentlearn.in/partner-with-us</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/faq</loc>
+    <loc>https://www.mentlearn.in/faq</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/terms</loc>
+    <loc>https://www.mentlearn.in/terms</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/privacy</loc>
+    <loc>https://www.mentlearn.in/privacy</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
   <!-- Course Pages -->
   <url>
-    <loc>https://mentlearn.vercel.app/courses/full-stack-development</loc>
+    <loc>https://www.mentlearn.in/courses/full-stack-development</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/courses/data-analytics</loc>
+    <loc>https://www.mentlearn.in/courses/data-analytics</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/courses/mern-stack</loc>
+    <loc>https://www.mentlearn.in/courses/mern-stack</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <!-- Student Pages -->
   <url>
-    <loc>https://mentlearn.vercel.app/student/live-sessions</loc>
+    <loc>https://www.mentlearn.in/student/live-sessions</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://mentlearn.vercel.app/student/register-live-session</loc>
+    <loc>https://www.mentlearn.in/student/register-live-session</loc>
     <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>

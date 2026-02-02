@@ -87,12 +87,13 @@ User-agent: dotbot
 Disallow: /
 
 # Canonical domain
-Host: https://mentlearn.vercel.app
+Host: https://www.mentlearn.in
 
 # Sitemap locations for better indexing
-Sitemap: https://mentlearn.vercel.app/sitemap.xml
-Sitemap: https://mentlearn.vercel.app/sitemap-blog.xml
-Sitemap: https://mentlearn.vercel.app/sitemap-courses.xml
-Sitemap: https://mentlearn.vercel.app/sitemap-mentors.xml
-Sitemap: https://mentlearn.vercel.app/sitemap-categories.xml
+Sitemap: https://www.mentlearn.in/sitemap.xml
+Sitemap: https://www.mentlearn.in/sitemap-blog.xml
+Sitemap: https://www.mentlearn.in/sitemap-courses.xml
+Sitemap: https://www.mentlearn.in/sitemap-mentors.xml
+Sitemap: https://www.mentlearn.in/sitemap-categories.xml
+
 

@@ -10,7 +10,7 @@
 ## ✅ Current Deployment Status
 
 ### Live Deployments:
-- **Frontend**: https://mentlearn.vercel.app
+- **Frontend**: https://www.mentlearn.in
 - **Backend**: https://mentlearn-backend-1212.onrender.com
 - **Vercel Account**: `mentneo` (abhis-projects-9c290dd6)
 - **Project Name**: `mentlearn`
@@ -176,7 +176,7 @@ NODE_ENV=production
 PORT=10000
 
 # CORS - Frontend Origins
-FRONTEND_ORIGIN=https://mentlearn.vercel.app,http://localhost:3000
+FRONTEND_ORIGIN=https://www.mentlearn.in,http://localhost:3000
 
 # Razorpay LIVE
 RAZORPAY_KEY_ID=rzp_live_RW6hQg5iL5Thm2
@@ -272,7 +272,7 @@ vercel --prod
 ### Issue: CORS errors between frontend and backend
 **Solution**: Add Vercel URL to `FRONTEND_ORIGIN` in Render:
 ```
-https://mentlearn.vercel.app,http://localhost:3000
+https://www.mentlearn.in,http://localhost:3000
 ```
 
 ### Issue: Environment variables not working
@@ -287,7 +287,7 @@ https://mentlearn.vercel.app,http://localhost:3000
 
 | Service | Platform | URL |
 |---------|----------|-----|
-| Frontend | Vercel | https://mentlearn.vercel.app |
+| Frontend | Vercel | https://www.mentlearn.in |
 | Backend API | Render | https://mentlearn-backend-1212.onrender.com |
 | Health Check | Render | https://mentlearn-backend-1212.onrender.com/api/health |
 | Vercel Dashboard | Vercel | https://vercel.com/abhis-projects-9c290dd6/mentlearn |
