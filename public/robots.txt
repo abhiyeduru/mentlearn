@@ -87,11 +87,12 @@ User-agent: dotbot
 Disallow: /
 
 # Canonical domain
-Host: https://mentneo.com
+Host: https://mentlearn.vercel.app
 
 # Sitemap locations for better indexing
-Sitemap: https://mentneo.com/sitemap.xml
-Sitemap: https://mentneo.com/sitemap-blog.xml
-Sitemap: https://mentneo.com/sitemap-courses.xml
-Sitemap: https://mentneo.com/sitemap-mentors.xml
-Sitemap: https://mentneo.com/sitemap-categories.xml
+Sitemap: https://mentlearn.vercel.app/sitemap.xml
+Sitemap: https://mentlearn.vercel.app/sitemap-blog.xml
+Sitemap: https://mentlearn.vercel.app/sitemap-courses.xml
+Sitemap: https://mentlearn.vercel.app/sitemap-mentors.xml
+Sitemap: https://mentlearn.vercel.app/sitemap-categories.xml
+

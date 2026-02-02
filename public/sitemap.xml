@@ -6,112 +6,112 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Main Pages -->
   <url>
-    <loc>https://mentneo.com/</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/about</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/about</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/courses</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/courses</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/mentors</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/mentors</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/live-sessions</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/live-sessions</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/blog</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/blog</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/contact</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/contact</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/pricing</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/pricing</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/reviews</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/reviews</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/partner-with-us</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/partner-with-us</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/faq</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/faq</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/terms</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/terms</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/privacy</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/privacy</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
   <!-- Course Pages -->
   <url>
-    <loc>https://mentneo.com/courses/full-stack-development</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/courses/full-stack-development</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/courses/data-analytics</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/courses/data-analytics</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/courses/mern-stack</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/courses/mern-stack</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <!-- Student Pages -->
   <url>
-    <loc>https://mentneo.com/student/live-sessions</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/student/live-sessions</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://mentneo.com/student/register-live-session</loc>
-    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+    <loc>https://mentlearn.vercel.app/student/register-live-session</loc>
+    <lastmod>2026-02-02T00:00:00+00:00</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
