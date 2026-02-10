@@ -105,6 +105,9 @@ import LiveSessions from './pages/student/LiveSessions';
 import LiveSessionsPublic from './pages/LiveSessionsPublic';
 import LiveSessionRegister from './pages/student/LiveSessionRegister';
 import DataAnalystLiveSessions from './pages/admin/DataAnalystLiveSessions';
+import HiringPartnerRegister from './pages/partner/HiringPartnerRegister';
+import HiringPartnerLogin from './pages/partner/HiringPartnerLogin';
+import PartnerDashboard from './pages/partner/PartnerDashboard';
 
 // Creator pages
 import CreatorDashboard from './pages/creator/Dashboard';
@@ -116,9 +119,9 @@ import AssignmentSubmissions from './pages/creator/AssignmentSubmissions';
 // Create route protection components for different roles
 function AdminRoute({ children }) {
   const { userRole, loading, currentUser } = useAuth();
-  
+
   console.log('🛡️ AdminRoute check:', { userRole, loading, currentUserExists: !!currentUser });
-  
+
   if (loading) {
     console.log('⏳ AdminRoute: Still loading authentication...');
     return (
@@ -130,19 +133,19 @@ function AdminRoute({ children }) {
       </div>
     );
   }
-  
+
   if (userRole !== 'admin') {
     console.log('❌ AdminRoute: Access denied. User role is:', userRole, '(expected: admin)');
     return <Navigate to="/unauthorized" />;
   }
-  
+
   console.log('✅ AdminRoute: Access granted for admin');
   return children;
 }
 
 function DataAnalystRoute({ children }) {
   const { userRole, loading } = useAuth();
-  
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -153,11 +156,32 @@ function DataAnalystRoute({ children }) {
       </div>
     );
   }
-  
+
   if (userRole !== 'data_analyst' && userRole !== 'admin') {
     return <Navigate to="/dashboard" />;
   }
-  
+
+  return children;
+}
+
+function HiringPartnerRoute({ children }) {
+  const { userRole, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (userRole !== 'hiring_partner') {
+    return <Navigate to="/partner/login" />;
+  }
+
   return children;
 }
 
@@ -230,6 +254,17 @@ function App() {
               <Route path="/reviews" element={<Reviews />} />
               <Route path="/contact" element={<PartnerWithUs />} />
               <Route path="/partner-with-us" element={<PartnerWithUs />} />
+
+              {/* Partner Portal Routes */}
+              <Route path="/partner/register" element={<HiringPartnerRegister />} />
+              <Route path="/partner/login" element={<HiringPartnerLogin />} />
+              <Route path="/partner/dashboard" element={
+                <ProtectedRoute>
+                  <HiringPartnerRoute>
+                    <PartnerDashboard />
+                  </HiringPartnerRoute>
+                </ProtectedRoute>
+              } />
               <Route path="/programs/academy-track" element={<AcademyTrack />} />
               <Route path="/programs/intensive-track" element={<IntensiveTrack />} />
               <Route path="/programs/launchpad" element={<Launchpad />} />
@@ -243,13 +278,15 @@ function App() {
               <Route path="/live-sessions" element={<LiveSessionsPublic />} />
               <Route path="/live-sessions/register" element={<LiveSessionRegister />} />
               <Route path="/join-live-session" element={<JoinLiveSession />} />
-              
+              <Route path="/live" element={<LiveSessionRegister />} /> {/* Short alias */}
+              <Route path="/register-live" element={<LiveSessionRegister />} /> {/* Explicit alias */}
+
               {/* Mentor Detail Page */}
               <Route path="/mentor/:id" element={<MentorDetail />} />
-              
+
               {/* Emergency Admin Access */}
               <Route path="/emergency-admin" element={<DirectAdminAccess />} />
-              
+
               {/* Admin Routes with new layout */}
               <Route path="/admin" element={<AdminRoute><AdminLayout /></AdminRoute>}>
                 <Route path="dashboard" element={<DataAnalystDashboard />} />
@@ -282,7 +319,7 @@ function App() {
                 <Route path="live-sessions" element={<ManageLiveSessions />} />
                 <Route path="reviews" element={<ManageReviews />} />
               </Route>
-              
+
               {/* Legacy Admin Routes */}
               <Route path="/admin-old/dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
               <Route path="/admin-old/courses" element={<AdminRoute><ManageCourses /></AdminRoute>} />
@@ -299,106 +336,106 @@ function App() {
                 <Route path="assignment-submissions" element={<AssignmentSubmissions />} />
                 <Route path="profile" element={<CreatorProfile />} />
               </Route>
-            
-            {/* Student Routes - Using Modern LearnIQ Templates */}
-            {/* LearnIQ Dashboard Routes */}
-            <Route path="/student/*" element={<LearnIQRoutes />} />
-            
-            {/* Legacy redirects to LearnIQ templates */}
-            <Route path="/student/dashboard" element={<Navigate to="/student/student-dashboard" replace />} />
-            <Route path="/student/new-dashboard" element={<Navigate to="/student/student-dashboard" replace />} />
-            <Route path="/student/simple-dashboard" element={<Navigate to="/student/student-dashboard" replace />} />
-            
-            {/* Keep essential functional pages */}
-            <Route path="/student/courses" element={<ProtectedRoute><StudentCourses /></ProtectedRoute>} />
-            <Route path="/student/our-courses" element={<ProtectedRoute><StudentOurCourses /></ProtectedRoute>} />
-            <Route path="/student/enroll/:courseId" element={<ProtectedRoute><CourseEnrollment /></ProtectedRoute>} />
-            <Route path="/payment/success" element={<ProtectedRoute><CoursePaymentSuccess /></ProtectedRoute>} />
-            <Route path="/student/interview-prep" element={<ProtectedRoute><InterviewPrep /></ProtectedRoute>} />
-            <Route path="/student/refer-and-earn" element={<ProtectedRoute><ReferAndEarn /></ProtectedRoute>} />
-            <Route path="/student/quiz/:quizId" element={<ProtectedRoute><QuizAttempt /></ProtectedRoute>} />
-            <Route path="/student/quizzes" element={<ProtectedRoute><StudentQuizzes /></ProtectedRoute>} />
-            <Route path="/student/quizzes/:quizId/take/:assignmentId" element={<ProtectedRoute><TakeQuiz /></ProtectedRoute>} />
-            <Route path="/student/quizzes/:quizId/results/:assignmentId" element={<ProtectedRoute><QuizResults /></ProtectedRoute>} />
-            <Route path="/student/live-sessions" element={<ProtectedRoute><LiveSessions /></ProtectedRoute>} />
-            <Route path="/student/live-sessions/register" element={<LiveSessionRegister />} />
-            
-            {/* Auth Routes */}
-            
-            {/* Payment Routes */}
-            <Route 
-              path="/course/:courseId/enroll" 
-              element={
-                <ProtectedRoute>
-                  <CourseEnrollment />
-                </ProtectedRoute>
-              } 
-            />
-            <Route path="/course/:courseId/success" element={<ProtectedRoute><PaymentSuccessPage /></ProtectedRoute>} />
-            <Route path="/payment-flow" element={<Navigate to="/student/student-dashboard" replace />} />
-            
-            {/* Legacy dashboard routes - redirect to role-based dashboard */}
-            <Route path="/dashboard" element={
-              <ProtectedRoute>
-                <RoleBasedRedirect />
-              </ProtectedRoute>
-            } />
-            <Route path="/course/:courseId" element={<Navigate to="/student/student-dashboard/course/:courseId" replace />} />
-            <Route path="/course/:courseId/learn" element={<Navigate to="/student/student-dashboard/course/:courseId" replace />} />
-            
-            {/* Admin Dashboard */}
-            <Route path="/admin/dashboard" element={
-              <ProtectedRoute>
-                <AdminRoute>
-                  <AdminDashboard />
-                </AdminRoute>
-              </ProtectedRoute>
-            } />
-            
-            {/* Data Analyst Dashboard */}
-            <Route path="/data-analyst/dashboard" element={
-              <ProtectedRoute>
-                <DataAnalystRoute>
-                  <DataAnalystDashboard />
-                </DataAnalystRoute>
-              </ProtectedRoute>
-            } />
-            <Route path="/data-analyst/leads" element={
-              <ProtectedRoute>
-                <DataAnalystRoute>
-                  <Leads />
-                </DataAnalystRoute>
-              </ProtectedRoute>
-            } />
-            <Route path="/data-analyst/support-tickets" element={
-              <ProtectedRoute>
-                <DataAnalystRoute>
-                  <SupportTickets />
-                </DataAnalystRoute>
-              </ProtectedRoute>
-            } />
-            <Route path="/data-analyst/live-sessions" element={
-              <ProtectedRoute>
-                <DataAnalystRoute>
-                  <LiveSessionAnalytics />
-                </DataAnalystRoute>
-              </ProtectedRoute>
-            } />
-            <Route path="/data-analyst/live-sessions-management" element={
-              <ProtectedRoute>
-                <DataAnalystRoute>
-                  <DataAnalystLiveSessions />
-                </DataAnalystRoute>
-              </ProtectedRoute>
-            } />
-            
-            {/* Add easy access route for analytics */}
-            <Route path="/analytics" element={<AnalyticsRedirect />} />
 
-            {/* Redirect unknown routes to home */}
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
-        </Router>
+              {/* Student Routes - Using Modern LearnIQ Templates */}
+              {/* LearnIQ Dashboard Routes */}
+              <Route path="/student/*" element={<LearnIQRoutes />} />
+
+              {/* Legacy redirects to LearnIQ templates */}
+              <Route path="/student/dashboard" element={<Navigate to="/student/student-dashboard" replace />} />
+              <Route path="/student/new-dashboard" element={<Navigate to="/student/student-dashboard" replace />} />
+              <Route path="/student/simple-dashboard" element={<Navigate to="/student/student-dashboard" replace />} />
+
+              {/* Keep essential functional pages */}
+              <Route path="/student/courses" element={<ProtectedRoute><StudentCourses /></ProtectedRoute>} />
+              <Route path="/student/our-courses" element={<ProtectedRoute><StudentOurCourses /></ProtectedRoute>} />
+              <Route path="/student/enroll/:courseId" element={<ProtectedRoute><CourseEnrollment /></ProtectedRoute>} />
+              <Route path="/payment/success" element={<ProtectedRoute><CoursePaymentSuccess /></ProtectedRoute>} />
+              <Route path="/student/interview-prep" element={<ProtectedRoute><InterviewPrep /></ProtectedRoute>} />
+              <Route path="/student/refer-and-earn" element={<ProtectedRoute><ReferAndEarn /></ProtectedRoute>} />
+              <Route path="/student/quiz/:quizId" element={<ProtectedRoute><QuizAttempt /></ProtectedRoute>} />
+              <Route path="/student/quizzes" element={<ProtectedRoute><StudentQuizzes /></ProtectedRoute>} />
+              <Route path="/student/quizzes/:quizId/take/:assignmentId" element={<ProtectedRoute><TakeQuiz /></ProtectedRoute>} />
+              <Route path="/student/quizzes/:quizId/results/:assignmentId" element={<ProtectedRoute><QuizResults /></ProtectedRoute>} />
+              <Route path="/student/live-sessions" element={<ProtectedRoute><LiveSessions /></ProtectedRoute>} />
+              <Route path="/student/live-sessions/register" element={<LiveSessionRegister />} />
+
+              {/* Auth Routes */}
+
+              {/* Payment Routes */}
+              <Route
+                path="/course/:courseId/enroll"
+                element={
+                  <ProtectedRoute>
+                    <CourseEnrollment />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="/course/:courseId/success" element={<ProtectedRoute><PaymentSuccessPage /></ProtectedRoute>} />
+              <Route path="/payment-flow" element={<Navigate to="/student/student-dashboard" replace />} />
+
+              {/* Legacy dashboard routes - redirect to role-based dashboard */}
+              <Route path="/dashboard" element={
+                <ProtectedRoute>
+                  <RoleBasedRedirect />
+                </ProtectedRoute>
+              } />
+              <Route path="/course/:courseId" element={<Navigate to="/student/student-dashboard/course/:courseId" replace />} />
+              <Route path="/course/:courseId/learn" element={<Navigate to="/student/student-dashboard/course/:courseId" replace />} />
+
+              {/* Admin Dashboard */}
+              <Route path="/admin/dashboard" element={
+                <ProtectedRoute>
+                  <AdminRoute>
+                    <AdminDashboard />
+                  </AdminRoute>
+                </ProtectedRoute>
+              } />
+
+              {/* Data Analyst Dashboard */}
+              <Route path="/data-analyst/dashboard" element={
+                <ProtectedRoute>
+                  <DataAnalystRoute>
+                    <DataAnalystDashboard />
+                  </DataAnalystRoute>
+                </ProtectedRoute>
+              } />
+              <Route path="/data-analyst/leads" element={
+                <ProtectedRoute>
+                  <DataAnalystRoute>
+                    <Leads />
+                  </DataAnalystRoute>
+                </ProtectedRoute>
+              } />
+              <Route path="/data-analyst/support-tickets" element={
+                <ProtectedRoute>
+                  <DataAnalystRoute>
+                    <SupportTickets />
+                  </DataAnalystRoute>
+                </ProtectedRoute>
+              } />
+              <Route path="/data-analyst/live-sessions" element={
+                <ProtectedRoute>
+                  <DataAnalystRoute>
+                    <LiveSessionAnalytics />
+                  </DataAnalystRoute>
+                </ProtectedRoute>
+              } />
+              <Route path="/data-analyst/live-sessions-management" element={
+                <ProtectedRoute>
+                  <DataAnalystRoute>
+                    <DataAnalystLiveSessions />
+                  </DataAnalystRoute>
+                </ProtectedRoute>
+              } />
+
+              {/* Add easy access route for analytics */}
+              <Route path="/analytics" element={<AnalyticsRedirect />} />
+
+              {/* Redirect unknown routes to home */}
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </Router>
         </ThemeProvider>
       </AuthProvider>
     </ErrorBoundary>

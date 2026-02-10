@@ -245,6 +245,29 @@ service cloud.firestore {
     }
 
     // ============================================================================
+    // LIVE SESSIONS (Public Registration)
+    // ============================================================================
+
+    match /liveSessionForms/{sessionId} {
+      // Anyone can read active sessions
+      allow read: if true;
+      
+      // Only admins can manage sessions
+      allow write: if isAdmin();
+    }
+
+    match /liveSessionRegistrations/{registrationId} {
+      // Anyone can register (create)
+      allow create: if true;
+      
+      // Only admins can read all registrations
+      allow read: if isAdmin();
+      
+      // Users can read/write their own if authenticated, but for public ones logic is handled by admin/backend
+      allow read, write: if isAuthenticated() && request.auth.uid == resource.data.userId;
+    }
+
+    // ============================================================================
     // LANDING VIDEOS (Public read, Admin write)
     // ============================================================================
 
