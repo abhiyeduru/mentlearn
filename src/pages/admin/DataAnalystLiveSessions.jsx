@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../firebase/firebase';
-import { 
-  collection, 
-  getDocs, 
-  addDoc, 
-  updateDoc, 
-  deleteDoc, 
-  doc, 
-  query, 
-  orderBy, 
+import {
+  collection,
+  getDocs,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  doc,
+  query,
+  orderBy,
   where,
-  Timestamp 
+  Timestamp
 } from 'firebase/firestore';
-import { 
-  FaPlus, 
-  FaEdit, 
-  FaTrash, 
-  FaUsers, 
-  FaCalendarCheck, 
+import {
+  FaPlus,
+  FaEdit,
+  FaTrash,
+  FaUsers,
+  FaCalendarCheck,
   FaEye,
   FaToggleOn,
   FaToggleOff,
@@ -35,7 +35,7 @@ const DataAnalystLiveSessions = () => {
   const [showModal, setShowModal] = useState(false);
   const [filterStatus, setFilterStatus] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  
+
   // Form state for creating sessions
   const [sessionForm, setSessionForm] = useState({
     title: '',
@@ -218,7 +218,7 @@ const DataAnalystLiveSessions = () => {
   // Filter registrations
   const filteredRegistrations = registrations.filter(reg => {
     const matchesStatus = filterStatus === 'all' || reg.status === filterStatus;
-    const matchesSearch = 
+    const matchesSearch =
       reg.fullName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       reg.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       reg.selectedSession?.toLowerCase().includes(searchTerm.toLowerCase());
@@ -298,19 +298,19 @@ const DataAnalystLiveSessions = () => {
 
       {/* Tabs */}
       <div className="tabs">
-        <button 
+        <button
           className={activeTab === 'registrations' ? 'active' : ''}
           onClick={() => setActiveTab('registrations')}
         >
           <FaUsers /> Registrations ({stats.total})
         </button>
-        <button 
+        <button
           className={activeTab === 'sessions' ? 'active' : ''}
           onClick={() => setActiveTab('sessions')}
         >
           <FaVideo /> Sessions ({sessions.length})
         </button>
-        <button 
+        <button
           className={activeTab === 'create' ? 'active' : ''}
           onClick={() => setActiveTab('create')}
         >
@@ -332,25 +332,25 @@ const DataAnalystLiveSessions = () => {
               />
             </div>
             <div className="filter-buttons">
-              <button 
+              <button
                 className={filterStatus === 'all' ? 'active' : ''}
                 onClick={() => setFilterStatus('all')}
               >
                 All
               </button>
-              <button 
+              <button
                 className={filterStatus === 'pending' ? 'active' : ''}
                 onClick={() => setFilterStatus('pending')}
               >
                 Pending
               </button>
-              <button 
+              <button
                 className={filterStatus === 'contacted' ? 'active' : ''}
                 onClick={() => setFilterStatus('contacted')}
               >
                 Contacted
               </button>
-              <button 
+              <button
                 className={filterStatus === 'confirmed' ? 'active' : ''}
                 onClick={() => setFilterStatus('confirmed')}
               >
@@ -371,7 +371,7 @@ const DataAnalystLiveSessions = () => {
                   <th>Email</th>
                   <th>Phone</th>
                   <th>Session</th>
-                  <th>Level</th>
+                  <th>College / Role</th>
                   <th>Status</th>
                   <th>Date</th>
                   <th>Actions</th>
@@ -382,11 +382,13 @@ const DataAnalystLiveSessions = () => {
                   <tr key={reg.id}>
                     <td>{reg.fullName}</td>
                     <td>{reg.email}</td>
-                    <td>{reg.phone}</td>
-                    <td className="session-name">{reg.selectedSession}</td>
+                    <td>{reg.whatsapp || reg.phone || '-'}</td>
+                    <td className="session-name">
+                      {reg.sessionTitle || reg.selectedSession || 'Unknown Session'}
+                    </td>
                     <td>
-                      <span className={`badge badge-${reg.studentLevel}`}>
-                        {reg.studentLevel}
+                      <span className="badge">
+                        {reg.college || reg.studentLevel || '-'}
                       </span>
                     </td>
                     <td>
@@ -402,13 +404,13 @@ const DataAnalystLiveSessions = () => {
                       </select>
                     </td>
                     <td>
-                      {reg.registeredAt ? 
-                        new Date(reg.registeredAt.toDate()).toLocaleDateString() : 
+                      {reg.registeredAt ?
+                        new Date(reg.registeredAt.toDate()).toLocaleDateString() :
                         'N/A'
                       }
                     </td>
                     <td>
-                      <button 
+                      <button
                         className="btn-icon"
                         onClick={() => {
                           setSelectedRegistration(reg);
@@ -440,7 +442,7 @@ const DataAnalystLiveSessions = () => {
               <div key={session.id} className="session-card">
                 <div className="session-header">
                   <h3>{session.title}</h3>
-                  <button 
+                  <button
                     className={`toggle-btn ${session.isActive ? 'active' : ''}`}
                     onClick={() => toggleSessionStatus(session.id, session.isActive)}
                     title={session.isActive ? 'Active' : 'Inactive'}
@@ -475,7 +477,7 @@ const DataAnalystLiveSessions = () => {
                   )}
                 </div>
                 <div className="session-actions">
-                  <button 
+                  <button
                     className="btn-delete"
                     onClick={() => deleteSession(session.id)}
                   >
@@ -489,7 +491,7 @@ const DataAnalystLiveSessions = () => {
             <div className="empty-state">
               <FaVideo size={64} />
               <p>No sessions created yet</p>
-              <button 
+              <button
                 className="btn-primary"
                 onClick={() => setActiveTab('create')}
               >
@@ -659,15 +661,15 @@ const DataAnalystLiveSessions = () => {
               </div>
 
               <div className="form-actions">
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="btn-cancel"
                   onClick={() => setActiveTab('sessions')}
                 >
                   Cancel
                 </button>
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="btn-submit"
                   disabled={loading}
                 >
@@ -697,25 +699,36 @@ const DataAnalystLiveSessions = () => {
                 <p>{selectedRegistration.email}</p>
               </div>
               <div className="detail-group">
-                <label>Phone:</label>
-                <p>{selectedRegistration.phone}</p>
+                <label>Phone / WhatsApp:</label>
+                <p>{selectedRegistration.whatsapp || selectedRegistration.phone || 'N/A'}</p>
               </div>
               <div className="detail-group">
                 <label>Selected Session:</label>
-                <p>{selectedRegistration.selectedSession}</p>
+                <p>{selectedRegistration.sessionTitle || selectedRegistration.selectedSession || 'N/A'}</p>
               </div>
               <div className="detail-group">
-                <label>Student Level:</label>
-                <p>{selectedRegistration.studentLevel}</p>
+                <label>Session Date & Time:</label>
+                <p>
+                  {selectedRegistration.sessionDate || 'TBA'} at {selectedRegistration.sessionTime || 'TBA'}
+                </p>
               </div>
               <div className="detail-group">
-                <label>Preferred Time:</label>
-                <p>{selectedRegistration.preferredTime || 'Not specified'}</p>
+                <label>College / Role:</label>
+                <p>{selectedRegistration.college || selectedRegistration.studentLevel || 'N/A'}</p>
               </div>
-              <div className="detail-group">
-                <label>Learning Goals:</label>
-                <p>{selectedRegistration.goals}</p>
-              </div>
+              {/* Only show these if they exist (legacy fields) */}
+              {selectedRegistration.preferredTime && (
+                <div className="detail-group">
+                  <label>Preferred Time:</label>
+                  <p>{selectedRegistration.preferredTime}</p>
+                </div>
+              )}
+              {selectedRegistration.goals && (
+                <div className="detail-group">
+                  <label>Learning Goals:</label>
+                  <p>{selectedRegistration.goals}</p>
+                </div>
+              )}
               {selectedRegistration.additionalNotes && (
                 <div className="detail-group">
                   <label>Additional Notes:</label>
@@ -725,8 +738,8 @@ const DataAnalystLiveSessions = () => {
               <div className="detail-group">
                 <label>Registration Date:</label>
                 <p>
-                  {selectedRegistration.registeredAt ? 
-                    new Date(selectedRegistration.registeredAt.toDate()).toLocaleString() : 
+                  {selectedRegistration.registeredAt ?
+                    new Date(selectedRegistration.registeredAt.toDate()).toLocaleString() :
                     'N/A'
                   }
                 </p>

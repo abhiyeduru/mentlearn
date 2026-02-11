@@ -1,21 +1,21 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const SEO = ({ 
-  title, 
-  description, 
-  keywords, 
+const SEO = ({
+  title,
+  description,
+  keywords,
   image,
   type = 'website',
   author = 'Mentneo'
 }) => {
   const location = useLocation();
-  const currentUrl = `https://mentneo.com${location.pathname}`;
-  
+  const currentUrl = `https://www.mentlearn.in${location.pathname}`;
+
   const defaultTitle = 'Mentneo - Full Stack Development Program | Expert Mentorship & Live Sessions';
   const defaultDescription = 'Transform your college life into a career launchpad with Mentneo. Learn Full Stack Development, Data Analytics with expert mentors through live sessions.';
   const defaultKeywords = 'Mentneo, full stack development, MERN stack, data analytics, coding bootcamp, online learning, expert mentorship, live sessions';
-  const defaultImage = 'https://mentneo.com/mentneo-social.jpg';
+  const defaultImage = 'https://www.mentlearn.in/mentneo-social.jpg';
 
   const pageTitle = title ? `${title} | Mentneo` : defaultTitle;
   const pageDescription = description || defaultDescription;
@@ -31,7 +31,7 @@ const SEO = ({
     updateMetaTag('name', 'keywords', pageKeywords);
     updateMetaTag('name', 'author', author);
     updateMetaTag('name', 'robots', 'index, follow, max-image-preview:large');
-    
+
     // Update Open Graph tags
     updateMetaTag('property', 'og:title', pageTitle);
     updateMetaTag('property', 'og:description', pageDescription);
@@ -39,14 +39,14 @@ const SEO = ({
     updateMetaTag('property', 'og:url', currentUrl);
     updateMetaTag('property', 'og:type', type);
     updateMetaTag('property', 'og:site_name', 'Mentneo');
-    
+
     // Update Twitter Card tags
     updateMetaTag('name', 'twitter:card', 'summary_large_image');
     updateMetaTag('name', 'twitter:title', pageTitle);
     updateMetaTag('name', 'twitter:description', pageDescription);
     updateMetaTag('name', 'twitter:image', pageImage);
     updateMetaTag('name', 'twitter:site', '@mentneo');
-    
+
     // Update canonical link
     updateCanonicalLink(currentUrl);
   }, [pageTitle, pageDescription, pageKeywords, pageImage, currentUrl, type, author]);

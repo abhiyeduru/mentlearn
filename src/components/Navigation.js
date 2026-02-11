@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext.js';
-import { 
-  FaGraduationCap, 
+import {
+  FaGraduationCap,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
@@ -10,7 +10,7 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
-  FaMoon, 
+  FaMoon,
   FaSun,
   FaBars,
   FaTimes,
@@ -68,7 +68,7 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Save the contact form data to Firestore
       await addDoc(collection(db, "contactSubmissions"), {
@@ -76,7 +76,7 @@ const ContactUs = () => {
         createdAt: serverTimestamp(),
         status: 'new' // Status field for admin to track (new, read, responded)
       });
-      
+
       // Success handling
       setIsSubmitting(false);
       setSubmitSuccess(true);
@@ -86,18 +86,18 @@ const ContactUs = () => {
         subject: '',
         message: ''
       });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitSuccess(false);
       }, 5000);
-      
+
     } catch (error) {
       console.error("Error submitting contact form:", error);
       setIsSubmitting(false);
       setSubmitError(true);
       setErrorMessage("There was an error sending your message. Please try again later.");
-      
+
       // Reset error message after 5 seconds
       setTimeout(() => {
         setSubmitError(false);
@@ -128,13 +128,13 @@ const ContactUs = () => {
 
             {/* Right side buttons */}
             <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
-              <button 
+              <button
                 onClick={toggleDarkMode}
                 className="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-700 focus:outline-none"
                 aria-label="Toggle dark mode"
               >
-                {darkMode ? 
-                  <FaSun className="h-5 w-5" /> : 
+                {darkMode ?
+                  <FaSun className="h-5 w-5" /> :
                   <FaMoon className="h-5 w-5" />
                 }
               </button>
@@ -198,7 +198,7 @@ const ContactUs = () => {
                       <FaEnvelope className="flex-shrink-0 h-5 w-5 text-indigo-600 dark:text-indigo-400" />
                       <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">Contact</span>
                     </Link>
-                    <button 
+                    <button
                       onClick={toggleDarkMode}
                       className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50 dark:hover:bg-slate-700 text-left w-full"
                     >
@@ -235,7 +235,7 @@ const ContactUs = () => {
       {/* Hero Section */}
       <div className="relative py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -258,7 +258,7 @@ const ContactUs = () => {
           <div className="relative bg-white dark:bg-slate-800 shadow-xl">
             <div className="grid grid-cols-1 lg:grid-cols-3">
               {/* Contact information */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
@@ -347,7 +347,7 @@ const ContactUs = () => {
               </motion.div>
 
               {/* Contact form */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -449,7 +449,7 @@ const ContactUs = () => {
                           <div className="ml-3">
                             <h3 className="text-sm font-medium text-red-800 dark:text-red-200">There was an error sending your message</h3>
                             <div className="mt-2 text-sm text-red-700 dark:text-red-300">
-                              <p>Please try again later or contact us directly at contact@mentneo.com.</p>
+                              <p>Please try again later or contact us directly at official@mentlearn.in.</p>
                             </div>
                           </div>
                         </div>
@@ -484,7 +484,7 @@ const ContactUs = () => {
       {/* FAQ Section */}
       <div className="bg-gray-50 dark:bg-slate-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -499,7 +499,7 @@ const ContactUs = () => {
           </motion.div>
           <div className="mt-12">
             <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-12">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -512,7 +512,7 @@ const ContactUs = () => {
                 </dd>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -525,7 +525,7 @@ const ContactUs = () => {
                 </dd>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -538,7 +538,7 @@ const ContactUs = () => {
                 </dd>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -551,7 +551,7 @@ const ContactUs = () => {
                 </dd>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -564,7 +564,7 @@ const ContactUs = () => {
                 </dd>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -584,7 +584,7 @@ const ContactUs = () => {
       {/* Map Section */}
       <div className="bg-white dark:bg-slate-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -597,7 +597,7 @@ const ContactUs = () => {
               We're located in Kakinada.
             </p>
           </motion.div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
